@@ -150,7 +150,7 @@ function draw_decoded_file(){
   
   if(mime_type == "Audio"){
     buttonStyleSettings();
-    if(decoded_audio.isPlaying())
+    if(!decoded_audio_element.paused)
     drawButton(buttons.pauseDecodedAudio)
     else
     drawButton(buttons.playDecodedAudio)
