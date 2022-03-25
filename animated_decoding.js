@@ -266,7 +266,10 @@ function updateAnimatedDecoding(){
         decoded_image = loadImage("data:image/"+decoded_file_extension+ ";base64,"+hexToBase64(decoded_file_hex))
       }
       if(getMimeType(decoded_file_extension) == "Audio"){
-        decoded_audio = loadSound("data:audio/"+decoded_file_extension+ ";base64,"+hexToBase64(decoded_file_hex), ()=>{decoded_audio.play()}  )
+        // decoded_audio = loadSound("data:audio/"+decoded_file_extension+ ";base64,"+hexToBase64(decoded_file_hex), ()=>{decoded_audio.play()}  )
+        decoded_audio_element = document.createElement('audio')
+        decoded_audio_element.src = "data:audio/"+decoded_file_extension+ ";base64,"+hexToBase64(decoded_file_hex);
+        decoded_audio_element.play();
       }
       textWrap(WORD)
     }
