@@ -199,8 +199,9 @@ function setupButtons(){
     color: ui_colors.blue,
     onclick: ()=>{
       if(current_screen=="decode1" && !decoding_with_animation && decoding_complete ){
-        if(getMimeType(decoded_file_extension) == "Audio" && decoded_audio.isPlaying() && !toggled_audio){
-          decoded_audio.stop();
+        if(getMimeType(decoded_file_extension) == "Audio" && !decoded_audio_element.paused && !toggled_audio){
+          decoded_audio_element.pause();
+          decoded_audio_element.currentTime = 0;
           toggled_audio = true;
         }
       }
@@ -215,8 +216,8 @@ function setupButtons(){
     color: ui_colors.blue,
     onclick: ()=>{
       if(current_screen=="decode1" && !decoding_with_animation && decoding_complete ){
-        if(getMimeType(decoded_file_extension) == "Audio" && !decoded_audio.isPlaying() && !toggled_audio){
-          decoded_audio.play();
+        if(getMimeType(decoded_file_extension) == "Audio" && decoded_audio_element.paused && !toggled_audio){
+          decoded_audio_element.play();
           toggled_audio = true;
         }
       }
