@@ -233,9 +233,9 @@ function setupButtons(){
     icon_side: "right", //on which side of the text should the icon display?
     color: ui_colors.white,
     onclick: ()=>{
-      if(current_screen=="create4"|| (current_screen=="decode1" && !decoding_with_animation && decoding_complete) ){
+      /*if(current_screen=="create4"|| (current_screen=="decode1" && !decoding_with_animation && decoding_complete) ){
         window.open("https://youtube.com", "_blank")
-      }
+      }*/
     }
   }
   buttons.encode = {
