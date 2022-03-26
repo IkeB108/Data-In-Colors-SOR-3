@@ -164,7 +164,7 @@ function draw_decoded_file(){
   }
   
   buttonStyleSettings();
-  drawButton(buttons.howDoesItWork)
+  //drawButton(buttons.howDoesItWork)
   drawButton(buttons.downloadDecodedFile)
 }
 
