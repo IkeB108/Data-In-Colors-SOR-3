@@ -20,7 +20,10 @@ function setupButtons(){
       current_screen = "front"
       decoding_with_animation = false;
       decoding_complete = false;
-      if(decoded_audio)decoded_audio.stop();
+      if(typeof decoded_audio_element !== "undefined"){
+        decoded_audio_element.pause();
+        decoded_audio_element.currentTime = 0;
+      }
     }
   }
   buttons.next = {
