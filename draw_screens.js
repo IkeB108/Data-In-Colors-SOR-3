@@ -63,5 +63,5 @@ function draw_create4(){
   draw_chosen_image_graphic();
   buttonStyleSettings();
   drawButton(buttons.saveImage)
-  //drawButton(buttons.howDoesItWork)
+  drawButton(buttons.howDoesItWork)
 }
