@@ -342,7 +342,7 @@ function setupButtons(){
   mouseOverButton = (button) => {
     if(!button.h)button.h = button.w;
     var ret = collidePointRect(mouseX, mouseY, button.x, button.y, button.w, button.h)
-    if(ret && !mouse_is_pointer && !button.disabled){cursor('pointer');mouse_is_pointer = true}
+    //if(ret && !mouse_is_pointer && !button.disabled){cursor('pointer');mouse_is_pointer = true}
     return ret;
   }
   mouseOverButtonAtPress = (button) => {
